@@ -15,7 +15,7 @@ cask "knockport" do
   # fight an app that has already updated itself.
   auto_updates true
 
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
 
   app "KnockPort.app"
 
