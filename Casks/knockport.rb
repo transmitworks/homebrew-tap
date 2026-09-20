@@ -1,9 +1,9 @@
 cask "knockport" do
   arch arm: "aarch64", intel: "x64"
 
-  version "0.3.2"
-  sha256 arm:   "2805f8660386062b9c9b8a3b6edd55eaa4e3bfa7886b86d00774f5e6b4873256",
-         intel: "b47f2a5a32792f46466b4a5548f6b17d073ccd47b06ee01f07bf27449e835585"
+  version "0.3.3"
+  sha256 arm:   "53fff948b0f169dbfde93b128443d8e8385465302ad396745a74a82e2d4f7747",
+         intel: "9aaad58e76e0ed4ea27a7a59b0d57a23ca95e3a5b65b66b5647703b40c644622"
 
   url "https://github.com/WertCore/knockport-releases/releases/download/v#{version}/KnockPort_#{version}_#{arch}.dmg"
   name "KnockPort"
