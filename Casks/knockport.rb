@@ -1,11 +1,11 @@
 cask "knockport" do
   arch arm: "aarch64", intel: "x64"
 
-  version "0.3.3"
-  sha256 arm:   "53fff948b0f169dbfde93b128443d8e8385465302ad396745a74a82e2d4f7747",
-         intel: "9aaad58e76e0ed4ea27a7a59b0d57a23ca95e3a5b65b66b5647703b40c644622"
+  version "0.3.7"
+  sha256 arm:   "1251651bb039aa8d133e93381249377060482885d8b51655d06acc98fa5aa857",
+         intel: "20e676ae6f27efdaa90eece2a9a853113db1af4855f69e9a6304bb7a189d7496"
 
-  url "https://github.com/WertCore/knockport-releases/releases/download/v#{version}/KnockPort_#{version}_#{arch}.dmg"
+  url "https://github.com/transmitworks/knockport-releases/releases/download/v#{version}/KnockPort_#{version}_#{arch}.dmg"
   name "KnockPort"
   desc "API client for HTTP, GraphQL, WebSocket, SSE, Socket.IO, MQTT and gRPC"
   homepage "https://knockport.com/"
