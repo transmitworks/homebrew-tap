@@ -30,19 +30,16 @@ cask "knockport" do
   ]
 
   caveats <<~EOS
-    KnockPort is not notarized by Apple yet, so macOS refuses to open it after a
-    normal install and reports it as "damaged". It is not damaged — that is what
+    KnockPort is not notarized by Apple yet, so macOS quarantines it on install
+    and reports it as "damaged" on first open. It is not damaged; that is what
     macOS says about any app it cannot verify.
 
-    Install it without the quarantine flag and the message does not appear:
-
-      brew install --cask --no-quarantine transmitworks/tap/knockport
-
-    If you have already installed it the ordinary way, this clears it:
+    Homebrew removed the --no-quarantine flag in 6.x, so clear the quarantine
+    attribute yourself after installing (once per install):
 
       xattr -dr com.apple.quarantine "/Applications/KnockPort.app"
 
-    Homebrew applies the quarantine attribute itself, so this cannot be handled
-    in the cask — the flag has to come from you.
+    If that reports a permissions error, prefix it with sudo. Then open
+    KnockPort normally.
   EOS
 end
